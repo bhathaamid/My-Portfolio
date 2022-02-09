@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup <Form></Form></title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    
+  </head>
+  <body>
+    <div class="container p-5">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <form class="bg-light">
+                <div class="text-center mb-4"><h1>Signup Form</h1></div>
+                <div class="mb-3">
+                  <label for="" class="form-label">First Name</label>
+                  <input
+                    type="fname"
+                    class="form-control"
+                    id="fName"
+                  onblur="firstNameOnBlur()"
+                    name="fname"
+                    aria-describedby="fnamehelp"
+                    autocomplete="off"
+                  />
+
+                  <div id="firstNameError" class="invalid-feedback">Please enter first name.</div>
+                  <!-- <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div> -->
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Last Name</label>
+                  <input
+                    type="lastname"
+                    name="lastName"
+                    class="form-control"
+                    id="lastName"
+                    autocomplete="off"
+                  />
+                  <div id="lastNameError" class="invalid-feedback">Please enter second name.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Enter email or phone no</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    id="email"
+                    autocomplete="off"
+                  />
+                  <div id="emailError"
+                   class="invalid-feedback">
+                    Please enter valid email or phone number first.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" autocomplete="off" />
+                  <div id="passwordError"
+                  class="invalid-feedback">Please enter valid password.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="Confirm Password" class="form-label"> Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmPassword"
+                    autocomplete="off"
+                  />
+                  <div id="confirmPasswordError"
+                   class="invalid-feedback">Password does not match!</div>
+                </div>
+
+                <!-- <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                <div class="d-grid col-6 mx-auto">
+                  <button class="btn btn-primary" onclick="sumitFormAction()" type="button">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
