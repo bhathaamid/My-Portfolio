@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup <Form></Form></title>
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/mystyle.css" />
   </head>
   <body>
     <div class="container p-5">
@@ -13,14 +14,21 @@
           <div class="card">
             <div class="card-body">
               <form class="bg-light">
-                <div class="text-center mb-4"><h1>Signup Form</h1></div>
+                <div class="text-center mb-4">
+                  <h1>Signup Form</h1>
+                  <div>
+                    <span>Welcome to </span>
+                    <h2 id="result"></h2>
+                    <ul id="items"></ul>
+                  </div>
+                </div>
                 <div class="mb-3">
                   <label for="" class="form-label">First Name</label>
                   <input
                     type="fname"
                     class="form-control"
                     id="fName"
-                    onfocus="signUpFormOnBlurAction('fName')"
+                    onkeyup="signUpFormOnKeyUpAction('fName')"
                     name="fname"
                     aria-describedby="fnamehelp"
                     autocomplete="off"
@@ -38,21 +46,15 @@
                     name="lastName"
                     class="form-control"
                     id="lastName"
-                    onblur="signUpFormOnBlurAction('lastName')"
+                    onkeyup="signUpFormOnKeyUpAction('lastName')"
                     autocomplete="off"
                   />
                   <div id="lastNameError" class="invalid-feedback">Please enter second name.</div>
                 </div>
                 <div class="mb-3">
                   <label for="" class="form-label">Enter email or phone no</label>
-                  <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    id="email"
-                    onblur="signUpFormOnBlurAction('email')"
-                    autocomplete="off"
-                  />
+                  <input type="email" name="email" class="form-control" id="email"
+                  onkeyup="signUpFormOnKeyUpAction('email') autocomplete="off" />
                   <div id="emailError" class="invalid-feedback">
                     Please enter valid email or phone number first.
                   </div>
@@ -64,7 +66,7 @@
                     class="form-control"
                     id="password"
                     autocomplete="off"
-                    onblur="signUpFormOnBlurAction('password')"
+                    onkeyup="signUpFormOnKeyUpAction('password')"
                   />
                   <div id="passwordError" class="invalid-feedback">
                     Please enter valid password.
@@ -76,7 +78,7 @@
                     type="password"
                     class="form-control"
                     id="confirmPassword"
-                    onblur="signUpFormOnBlurAction('confirmPassword')"
+                    onkeyup="signUpFormOnKeyUpAction('confirmPassword')"
                     autocomplete="off"
                   />
                   <div id="confirmPasswordError" class="invalid-feedback">

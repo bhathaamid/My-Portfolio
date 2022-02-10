@@ -1,5 +1,3 @@
-
-
 function sumitFormAction() {
   const firstName = document.getElementById("fName").value
   const lastName = document.getElementById("lastName").value
@@ -49,15 +47,36 @@ function sumitFormAction() {
     document.getElementById("confirmPasswordError").innerHTML = "Passwords are not matching"
     return
   } else {
-    document.getElementById("password").classList.remove("is-invalid") // Remove error (red color) class
-    document.getElementById("password").classList.add("is-valid") // Add  class (Green color)
+    // window.location.href = "index.html" // For navigate purpose
   }
 }
 
-function signUpFormOnBlurAction(id) {
+function signUpFormOnKeyUpAction(id) {
+  console.log(id)
   const value = document.getElementById(id).value
   if (value?.length > 0) {
     document.getElementById(id).classList.remove("is-invalid") // Remove error (red color) class
     document.getElementById(id).classList.add("is-valid") // Add  class (Green color)
+  } else if (value == "") {
+    document.getElementById(id).classList.add("is-invalid")
+
+    document.getElementById(id).classList.remove("is-valid")
   }
 }
+
+/*JSON 
+let result = {
+  name: "Hamid",
+  phone: 987788777,
+  data: [
+    'Jan',
+    'Feb',
+    'Mar'
+  ]
+}
+document.getElementById("result").innerHTML = result.name + ' ' + result.phone
+let res = ''
+result.data.forEach(item => {
+  res = res + `<li>${item}</li>`;
+  document.getElementById("items").innerHTML = res
+})*/

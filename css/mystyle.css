@@ -3,3 +3,8 @@
     width: 50%;
   }
 }
+
+input {
+  border-top-left-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
+}
